@@ -23,13 +23,16 @@ export class Clock {
 
     public time: string;
     
-    constructor(private root: HTMLElement) {
+    constructor(private root: HTMLElement, private Id?:string, private Class?:string, private Style?:string) {
         this.Init();
         this.node = document.createElement("span");
         this.root.appendChild(this.node);
     }
     Init = () => {
-    
+
+        if(this.Id!=null)this.node.setAttribute("id", this.Id);
+        if(this.Class!=null)this.node.setAttribute("class", this.Class);
+        if(this.Style!=null)this.node.setAttribute("style", this.Style);
 
         this.tick$.subscribe(val => {
 
