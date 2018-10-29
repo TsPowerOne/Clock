@@ -24,9 +24,9 @@ export class Clock {
     public time: string;
     
     constructor(private root: HTMLElement, private Id?:string, private Class?:string, private Style?:string) {
-        this.Init();
         this.node = document.createElement("span");
         this.root.appendChild(this.node);
+        this.Init();
     }
     Init = () => {
 
