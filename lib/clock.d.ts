@@ -15,10 +15,10 @@ export declare class Clock {
     private endtime;
     private started;
     private stopped;
-    endtime$: import("rxjs/internal/Observable").Observable<any>;
-    started$: import("rxjs/internal/Observable").Observable<any>;
-    stopped$: import("rxjs/internal/Observable").Observable<any>;
-    tick$: import("rxjs/internal/Observable").Observable<any>;
+    endtime$: import("rxjs").Observable<any>;
+    started$: import("rxjs").Observable<any>;
+    stopped$: import("rxjs").Observable<any>;
+    tick$: import("rxjs").Observable<any>;
     time: string;
     constructor(root: HTMLElement, Id?: string, Class?: string, Style?: string);
     Init: () => void;
